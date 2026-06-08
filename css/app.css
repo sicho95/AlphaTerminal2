@@ -1,0 +1,36 @@
+:root { --primary: #041627; --surface: #f7f9ff; --secondary: #3b6934; --error: #ba1a1a; --outline-variant: #c4c6cd; }
+* { box-sizing: border-box; }
+body { font-family: Inter, system-ui, sans-serif; }
+.material-symbols-outlined { font-size: 22px; line-height: 1; vertical-align: middle; }
+.headline-lg { font-size: clamp(2rem, 6vw, 4.5rem); line-height: .95; letter-spacing: -.06em; font-weight: 800; }
+.headline-md { font-size: clamp(1.35rem, 3vw, 2.1rem); line-height: 1.05; letter-spacing: -.04em; font-weight: 800; }
+.body-sm { font-size: .875rem; line-height: 1.45; }
+.data-tabular { font-variant-numeric: tabular-nums; font-feature-settings: 'tnum'; }
+.label-caps { font-size: .72rem; line-height: 1; text-transform: uppercase; letter-spacing: .12em; font-weight: 800; }
+.glass-card { border: 1px solid rgba(196,198,205,.72); background: linear-gradient(135deg, rgba(255,255,255,.9), rgba(255,255,255,.7)); backdrop-filter: blur(10px); box-shadow: 0 20px 60px rgba(4,22,39,.08); }
+.dark .glass-card { border-color: rgba(51,65,85,.8); background: linear-gradient(135deg, rgba(15,23,42,.92), rgba(15,23,42,.72)); }
+.nav-link { display: inline-flex; align-items: center; gap: 6px; border-radius: 12px; padding: 10px 12px; color: #667085; font-size: .9rem; font-weight: 700; }
+.nav-link.active, .bottom-link.active { color: #041627; background: rgba(4,22,39,.08); font-weight: 800; }
+.dark .nav-link.active, .dark .bottom-link.active { color: #fff; background: rgba(255,255,255,.1); }
+.bottom-link { display: flex; flex-direction: column; align-items: center; gap: 3px; border-radius: 12px; padding: 8px 4px; color: #667085; font-size: .72rem; font-weight: 700; }
+.icon-btn { display: inline-grid; min-width: 40px; height: 40px; place-items: center; border: 1px solid #c4c6cd; border-radius: 12px; background: rgba(255,255,255,.8); }
+.dark .icon-btn { border-color: #334155; background: rgba(15,23,42,.8); }
+.badge-dot { position: absolute; right: -4px; top: -5px; min-width: 20px; height: 20px; border-radius: 999px; background: #ba1a1a; color: #fff; font-size: .7rem; font-weight: 800; line-height: 20px; text-align: center; }
+.bento-grid { display: grid; gap: 24px; grid-template-columns: 1fr; }
+@media (min-width: 768px) { .bento-grid { grid-template-columns: repeat(12, minmax(0,1fr)); } }
+.card-pad { padding: 20px; }
+.metric-card { min-height: 160px; border-radius: 8px; }
+.pill { display: inline-flex; align-items: center; gap: 4px; border-radius: 12px; padding: 5px 8px; font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; }
+.pill-pea { background: rgba(59,105,52,.12); color: #3b6934; }
+.pill-cto { background: rgba(4,22,39,.1); color: #041627; }
+.dark .pill-cto { color: #dbeafe; background: rgba(219,234,254,.12); }
+.input { width: 100%; border: 1px solid #c4c6cd; border-radius: 8px; background: white; padding: 10px 12px; font-weight: 600; }
+.dark .input { border-color: #334155; background: #0f172a; }
+.btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 12px; background: #041627; color: #fff; padding: 10px 14px; font-weight: 800; }
+.btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid #c4c6cd; border-radius: 12px; background: white; color: #041627; padding: 10px 14px; font-weight: 800; }
+.dark .btn-secondary { border-color: #334155; background: #0f172a; color: #fff; }
+.progress { height: 10px; overflow: hidden; border-radius: 999px; background: rgba(196,198,205,.5); }
+.progress > span { display: block; height: 100%; border-radius: inherit; background: #3b6934; transition: width .5s ease; }
+.modal-backdrop { position: fixed; inset: 0; z-index: 60; display: grid; place-items: end center; background: rgba(4,22,39,.5); padding: 16px; }
+@media (min-width: 768px) { .modal-backdrop { place-items: center; } }
+@media print { header, nav, #notification-panel, .no-print, button { display: none !important; } main { padding: 0 !important; max-width: none !important; } .glass-card { box-shadow: none; break-inside: avoid; } }
