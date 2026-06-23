@@ -1,6 +1,8 @@
-# AlphaTerminal
+# AlphaTerminal2
 
-AlphaTerminal est une PWA mobile-first de suivi multi-portefeuilles PEA/CTO, conçue pour GitHub Pages sans étape de build. L'application est une SPA en vanilla JavaScript ES modules, Tailwind CSS CDN et Chart.js CDN.
+AlphaTerminal2 est le repo canonique de la PWA mobile-first de suivi multi-portefeuilles PEA / CTO.
+
+L’ancien repo `AlphaTerminal` n’est plus la référence.
 
 ## Fonctionnalités
 
@@ -36,7 +38,16 @@ AlphaTerminal est une PWA mobile-first de suivi multi-portefeuilles PEA/CTO, con
 
 ## Données
 
-Les portefeuilles sont stockés dans LocalStorage sous la clé `alphaTerm_portfolios`. Au premier lancement, l'application précharge des données de démonstration réalistes. Les cours peuvent être actualisés via Yahoo Finance en passant par le proxy AllOrigins :
+Les portefeuilles sont stockés dans LocalStorage sous la clé `alphaTerm_portfolios`.
+
+À terme, AlphaTerminal2 devra pouvoir lire les snapshots JSON produits dans SichoBrain, notamment :
+
+```text
+200_PROJECTS/pea/data/snapshots/
+200_PROJECTS/pea/data/historiques/
+```
+
+Les cours peuvent être actualisés via Yahoo Finance en passant par le proxy AllOrigins :
 
 ```text
 https://api.allorigins.win/raw?url=https://query1.finance.yahoo.com/v8/finance/chart/TICKER
@@ -46,14 +57,14 @@ https://api.allorigins.win/raw?url=https://query1.finance.yahoo.com/v8/finance/c
 
 ```bash
 # Cloner le repo
-git clone https://github.com/sicho96/AlphaTerminal
-cd AlphaTerminal
+git clone https://github.com/sicho95/AlphaTerminal2
+cd AlphaTerminal2
 
 # Pas de build nécessaire — vanilla JS + Tailwind CDN
 # Activer GitHub Pages dans Settings > Pages > Source: main branch / root
 
 # Vérifier que manifest.json et sw.js sont à la racine
-# URL finale : https://sicho96.github.io/AlphaTerminal/
+# URL probable : https://sicho95.github.io/AlphaTerminal2/
 ```
 
 ## Notes GitHub Pages
@@ -71,3 +82,9 @@ Servez le dossier avec un serveur statique afin de tester les modules ES et le s
 python3 -m http.server 8080
 # puis ouvrir http://localhost:8080
 ```
+
+## Lien avec SichoBrain
+
+SichoBrain reste la mémoire durable officielle.
+
+AlphaTerminal2 est une interface applicative qui doit pouvoir exploiter les données versionnées de SichoBrain sans les remplacer.
